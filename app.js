@@ -3,8 +3,6 @@ const cities_array = ["London"]
 const submit = document.getElementById("submit")
 let count_city = 0
 
-//implementer geoloc
-// swipe slide vers la gauche checker event 
 
 
 const firstUppercase = (string) => string[0].toUpperCase() + string.slice(1)
