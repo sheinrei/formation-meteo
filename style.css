@@ -1,0 +1,114 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.main_container {
+    margin-top: 200px;
+    background-color: rgb(221, 221, 221);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+
+
+}
+
+.container_input_city {
+    height: 12%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px 0;
+
+}
+
+.input_city {
+    height: 25px;
+    border-radius: 5px;
+}
+
+.submit {
+    height: 30px;
+}
+
+.container_meteo_city {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+
+    font-size: 1.2em;
+}
+
+.name_city {
+    font-size: 1.2em;
+    padding-left: 10px;
+}
+
+.meteo_city {
+    color: purple;
+}
+
+.container_temperature {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    padding-left: 20px;
+}
+
+.container_weather {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 10px;
+
+}
+
+.container_meteo {
+    width: 100%;
+}
+
+.temperature_max_city {
+    padding-right: 10px;
+}
+
+
+
+.container_deleat {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.deleat_favori {
+    height: 40px;
+    width: 40px;
+    background-color: red;
+    margin: 0 20px;
+
+}
+
+/* .deleat_favori::before{
+    content: "";
+    position: relative;
+    background-color: black;
+    height: 2px;width: 135%;
+    top:47%;right:7px;
+    display: flex;
+    rotate: 45deg;
+}
+.deleat_favori::after{
+    content: "";
+    position: relative;
+    background-color: black;
+    height: 2px;width: 135%;
+    top:42%;right:7px;
+    display: flex;
+    rotate: -45deg;
+} */
