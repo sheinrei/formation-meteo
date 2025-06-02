@@ -9,7 +9,14 @@ let start_x = [];
 div.addEventListener("touchmove", function (event) {
     const id = event.target.id;
     const pos_x = event.touches[0].clientX;
+
     if (getId(id)[0] == "container") { slide(id, pos_x) }
+    else {
+        const element = event.target.id
+        //const parent = document.getElementById(element)
+        console.log(element)
+
+    }
 })
 
 
@@ -20,7 +27,7 @@ div.addEventListener("touchend", function (e) {
     const end_x = e.changedTouches[0].screenX;
     const diff = end_x - start_x[0]
 
-    if (diff > width * 0.3 && getId(element.id)[0] == "container") {      
+    if (diff > width * 0.3 && getId(element.id)[0] == "container") {
         deleatFavori(getId(element.id[3]))
         document.getElementById(element.id).style.display = "none"
     } else {

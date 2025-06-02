@@ -81,9 +81,12 @@ body {
     width: 100%;
 }
 
-.temperature_max_city {
-    padding-right: 10px;
+.meteo_content{
+    margin: 0;
+    padding: 15px 10px;
+    
 }
+
 
 
 
@@ -92,14 +95,9 @@ body {
     align-items: center;
     justify-content: center;
 }
-
 .deleat_favori {
     display: block;
     height: 50%;
     width: 40px;
     margin: 0 20px;
-
-
 }
-
-/* slide */

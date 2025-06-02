@@ -25,13 +25,13 @@ async function setDom(element) {
             
             <div class="meteo_city">
                 <div class="container_temperature">
-                    <p id="temperature_min_city_${element}">Minimum : ${d.temp_min}</p>
-                    <p id="temperature_max_city_${element}" class="temperature_max_city">Maximum : ${d.temp_max}</p>
+                    <p id="temperature_min_city_${element}" class="meteo_content">Minimum : ${d.temp_min}</p>
+                    <p id="temperature_max_city_${element}" class="meteo_content">Maximum : ${d.temp_max}</p>
                 </div>
 
                 <div class="container_weather">
-                    <p id="weather_description_city_${element}">${firstUppercase(d.weather)}</p>
-                    <p id="humidity_city_${element}">Humidité : ${d.humidity}</p>
+                    <p id="weather_description_city_${element}" class="meteo_content">${firstUppercase(d.weather)}</p>
+                    <p id="humidity_city_${element}" class="meteo_content">Humidité : ${d.humidity}</p>
                 </div>
                 
             </div>
@@ -92,11 +92,10 @@ async function meteoData(emplacement) {
 
 // Init function
 
-
 const local_storage = JSON.parse(localStorage.getItem("city"));
 
 async function init() {
-    if (local_storage.length < 1) {
+    if (local_storage.length == 0) {
         localStorage.setItem("city", JSON.stringify(cities_array))
         setDom("London");
     } else {
