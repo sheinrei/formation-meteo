@@ -11,7 +11,7 @@ async function setFirstDom(position) {
 
     const lat = position.coords.latitude;
     const lon = position.coords.longitude;
-
+    const key = "c8a4e675fa901dc728e553a943ff7d88";
 
     const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${key}`;
 
