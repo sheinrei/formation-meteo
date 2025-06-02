@@ -1,6 +1,5 @@
 const div = document.querySelector("body");
 let last_x = 0;
-
 let start_x = [];
 
 

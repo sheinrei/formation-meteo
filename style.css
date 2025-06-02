@@ -2,7 +2,7 @@ body {
     display: flex;
     justify-content: center;
     background: radial-gradient(circle, rgba(145, 73, 153, 1) 0%, rgb(0, 0, 0) 100%);
-
+    font-family: "Jura", sans-serif;
 }
 
 .main_container {
@@ -10,10 +10,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 20px 15px 20px 10px rgb(202, 118, 212);
     border: 2px solid black;
-    border-bottom: none;
-   
+    border-bottom: none;   
 }
 
 .container_input_city {
@@ -27,13 +25,13 @@ body {
     border-radius: 16px 16px 0 0;
     border:2px solid black;
     border-bottom: none;
-
 }
 
 .input_city {
     height: 25px;
     width: 55%;
     border-radius: 5px;
+    box-shadow: 5px 5px 5px rgb(82, 250, 79);
 }
 
 
@@ -53,6 +51,7 @@ body {
 
 .name_city {
     font-size: 1.05em;
+    font-weight: bolder;
     padding-left: 10px;
     width: 25%;
 }

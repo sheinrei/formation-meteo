@@ -52,7 +52,6 @@ async function setDom(element) {
 
 
 //function pour retirer une ville de localStorage
-
 function deleatFavori(ville) {
     console.log("deleat city to localStorage")
     const name_city = firstUppercase(ville[3]);
