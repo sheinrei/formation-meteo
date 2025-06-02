@@ -1,36 +1,45 @@
-// slide pour virer une ville 
-let start_x = null;
-let end_x = null;
-const width_element = document.getElementById("main_container").clientWidth;
-const main_container = document.getElementById("main_container")
+
+const div = document.querySelector("body")
+let last_x = 0;
+
+let start_x = [];
 
 
-// fonction pour detecter dans quelle endroit on se trouve pour get l'id
-// avec event touchmove enregistrer x dans une var globale faire decalage de la div
-// et ensuite repeter l'action en boucle
-
-
-main_container.addEventListener("touchmove", function (e){
-    console.log(e)
-
+// est ce que je peux mettre que les container_meteo_city_? dans cet event?
+div.addEventListener("touchmove", function (event) {
+    const id = event.target.id;
+    const pos_x = event.touches[0].clientX;
+    if (getId(id)[0] == "container") { slide(id, pos_x) }
 })
 
 
 
-/* 
-main_container.addEventListener("touchstart", function (e) {
-    const x = e.touches[0].screenX;
-    start_x = x;
+div.addEventListener("touchend", function (e) {
+    let element = document.getElementById(e.target.id);
+    let width = element.clientWidth;
+    const end_x = e.changedTouches[0].screenX;
+    const diff = end_x - start_x[0]
 
-
-})
-
-main_container.addEventListener("touchend", function (e) {
-    const x = e.changedTouches[0].screenX
-    end_x = x;
-
-    if (Math.abs((start_x - end_x)) > width_element * .5) {
-        li1.style.display = "none"
+    if (diff > width * 0.3 && getId(element.id)[0] == "container") {      
+        deleatFavori(getId(element.id[3]))
+        document.getElementById(element.id).style.display = "none"
+    } else {
+        element.style.transform = `translateX(0)`
     }
+
 })
- */
+
+
+div.addEventListener("touchstart", function (e) {
+    start_x.push(e.touches[0].screenX);
+
+})
+
+function slide(id, pos_x) {
+
+
+    if (!last_x) { last_x = pos_x }
+    let diff = pos_x - last_x;
+    const element = document.getElementById(id);
+    element.style.transform = `translateX(${diff}px)`
+}

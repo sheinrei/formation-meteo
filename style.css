@@ -1,17 +1,18 @@
 body {
     display: flex;
     justify-content: center;
+    background: radial-gradient(circle, rgba(145, 73, 153, 1) 0%, rgb(0, 0, 0) 100%);
+
 }
 
 .main_container {
-    margin-top: 200px;
-    background-color: rgb(221, 221, 221);
+    background-color: #2eff2b;
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow: hidden;
-
-
+    border: 2px solid black;
+    box-shadow: 20px 15px 20px 10px rgb(202, 118, 212);
+    border-radius: 20px 20px 0 0;
 }
 
 .container_input_city {
@@ -22,11 +23,15 @@ body {
     justify-content: center;
 
     padding: 20px 0;
+    background-color: #723978;
+
+    border-radius: 16px 16px 0 0;
 
 }
 
 .input_city {
     height: 25px;
+    width: 55%;
     border-radius: 5px;
 }
 
@@ -35,19 +40,21 @@ body {
 }
 
 .container_meteo_city {
+
     width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     border-bottom: 1px solid black;
-
+    background-color: rgb(252, 199, 250);
     font-size: 1.2em;
 }
 
 .name_city {
-    font-size: 1.2em;
+    font-size: 1.05em;
     padding-left: 10px;
+    width: 25%;
 }
 
 .meteo_city {
@@ -58,14 +65,14 @@ body {
     display: flex;
     flex-direction: row;
     gap: 50px;
-    padding-left: 20px;
+    
 }
 
 .container_weather {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding-left: 20px;
+
     padding-right: 10px;
 
 }
@@ -87,28 +94,12 @@ body {
 }
 
 .deleat_favori {
-    height: 40px;
+    display: block;
+    height: 50%;
     width: 40px;
-    background-color: red;
     margin: 0 20px;
 
+
 }
 
-/* .deleat_favori::before{
-    content: "";
-    position: relative;
-    background-color: black;
-    height: 2px;width: 135%;
-    top:47%;right:7px;
-    display: flex;
-    rotate: 45deg;
-}
-.deleat_favori::after{
-    content: "";
-    position: relative;
-    background-color: black;
-    height: 2px;width: 135%;
-    top:42%;right:7px;
-    display: flex;
-    rotate: -45deg;
-} */
+/* slide */

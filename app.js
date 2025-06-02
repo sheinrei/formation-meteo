@@ -1,13 +1,15 @@
 const key = "c8a4e675fa901dc728e553a943ff7d88";
 const cities_array = ["London"]
 const submit = document.getElementById("submit")
-let count_city = 0
-
+let switched = true;
 
 
 const firstUppercase = (string) => string[0].toUpperCase() + string.slice(1)
 const convertCelsus = (number) => (number - 273).toFixed(1) + "°C"
 const getId = (e) => e.split("_");
+
+
+
 
 
 async function setDom(element) {
@@ -18,8 +20,7 @@ async function setDom(element) {
     create_html.className = "container_meteo";
 
     create_html.innerHTML = `
-        <div class="container_meteo_city" id="container_meteo_city_${firstUppercase(element)}">   
-
+        <div class="container_meteo_city" id="container_meteo_city_${firstUppercase(element)}"> 
             <div id="name_city_${element}" class="name_city">${firstUppercase(element)}</div>
             
             <div class="meteo_city">
@@ -36,17 +37,16 @@ async function setDom(element) {
             </div>
 
             <div class="container_deleat">
-                <p class="deleat_favori" id="deleat_favori_city_${firstUppercase(element)}"><p>
+                
+                <div class="deleat_favori">
+                    <i  id="deleat_favori_city_${firstUppercase(element)}" class=" fa fa-solid fa-trash" style="color:rgb(224, 92, 248);font-size:2.3em"></i>
+                </div>
+
+                
             </div>
         </div>`
     let new_div = document.getElementById("container_meteo_city");
     new_div.parentNode.append(create_html);
-    count_city++;
-
-    if (count_city > 2) {
-        const element = document.querySelector(".main_container");
-        element.style.margin = "0"
-    }
 }
 
 // fetch
