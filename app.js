@@ -51,7 +51,7 @@ async function setDom(element) {
 
 // fetch
 async function geocoding(city) {
-    const url = `http://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=${key}`
+    const url = `https://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=${key}`
 
     const response = await fetch(url);
     const data = await response.json();
@@ -95,7 +95,11 @@ async function meteoData(emplacement) {
 const local_storage = JSON.parse(localStorage.getItem("city"));
 
 async function init() {
+<<<<<<< HEAD
     if (local_storage.length == 0) {
+=======
+    if (!local_storage) {
+>>>>>>> 226de42a6b5461cea990cf173114d2fc54a576f2
         localStorage.setItem("city", JSON.stringify(cities_array))
         setDom("London");
     } else {
