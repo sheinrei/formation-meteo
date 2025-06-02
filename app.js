@@ -96,7 +96,7 @@ async function meteoData(emplacement) {
 const local_storage = JSON.parse(localStorage.getItem("city"));
 
 async function init() {
-    if (local_storage.length < 1) {
+    if (!local_storage) {
         localStorage.setItem("city", JSON.stringify(cities_array))
         setDom("London");
     } else {
