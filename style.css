@@ -6,12 +6,13 @@ body {
 }
 
 .main_container {
-    background-color: #2eff2b;
+    background-color:rgb(113, 255, 111);
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 2px solid black;
-    border-bottom: none;   
+    border: 2px solid rgb(0, 0, 0);
+    border-bottom: none;
+
 }
 
 .container_input_city {
@@ -21,7 +22,7 @@ body {
     align-items: center;
     justify-content: center;
     padding: 20px 0;
-    background-color: #723978;
+    background:radial-gradient(circle,#bd69c7 0%, rgb(95, 31, 92) 100% ) ;
     border-radius: 16px 16px 0 0;
     border:2px solid black;
     border-bottom: none;
@@ -31,7 +32,7 @@ body {
     height: 25px;
     width: 55%;
     border-radius: 5px;
-    box-shadow: 5px 5px 5px rgb(82, 250, 79);
+    box-shadow: 5px 5px 5px rgb(113, 255, 111);
 }
 
 
@@ -45,7 +46,7 @@ body {
     align-items: center;
     justify-content: space-between;
     border-bottom: 1px solid black;
-    background-color: rgb(252, 199, 250);
+    background-color: rgb(250, 179, 248);
     font-size: 1.2em;
 }
 
