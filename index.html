@@ -1,38 +1,35 @@
 <!DOCTYPE html>
 <html lang="fr">
-<!-- 
-voir pour le chargement de la ville de l'utilisateur la mettre en premier
-voir pour les ville que je appends qu'ils se mettent bien dans l'ordre.
-faire un tri dans la sementique de l'hmlt
-
- -->
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Station meteo créé dans le but de s'entrainer au Dev Web">
+    <meta name="author" content="Sheinrei">
     <title>Station météo</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="responciv.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Ancizar+Serif:ital,wght@0,300..900;1,300..900&family=Jura:wght@300..700&family=Lisu+Bosa:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
-    <header>
 
+</head>
 
 <body>
-    <div class="container_input_city">
-        <input class="input_city" id="input_city" type="text" placeholder="Entrez votre ville" value="">
-        <!-- <input class="submit" type="submit" id="submit"> -->
-        <i id="submit" class=" fa fa-regular fa-search" style="color:black; font-size: 1.8em;padding:10px 10px;"></i>
+    <div class="content">
+        <div class="container_input_city">
+            <input class="input_city" id="input_city" type="text" placeholder="Entrez une ville" value="">
+            <!-- <input class="submit" type="submit" id="submit"> -->
+            <i id="submit" class=" fa fa-regular fa-search"
+                style="color:black; font-size: 1.8em;padding:10px 10px;"></i>
+        </div>
+
+        <div id="main_container">
+            
+        </div>
     </div>
-    <div class="main_container" id="main_container">
-
-
-
-        <div class="container_meteo_city" id="container_meteo_city"></div>
 </body>
 
 

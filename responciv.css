@@ -1,9 +1,3 @@
-@media (max-width : 1024px){
-    .deleat_favori{
-        display:none
-    }
-
-}
 
 @media (max-width : 580px){
     .meteo_city{
