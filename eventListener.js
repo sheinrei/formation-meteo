@@ -25,10 +25,11 @@ submit.addEventListener("click", addCity);
 document.querySelector("#main_container").addEventListener("click", function (event) {
     const target_id = event.target.id;
     const main_container = document.getElementById(target_id).closest(`#container_meteo_city_${splitId(target_id)[3]}`);
-    const ville = main_container.childNodes[1].textContent;
+
+    const ville = document.getElementById(`name_city_${splitId(target_id)[3]}`).textContent
 
     let checked_deleat = splitId(target_id);
-    console.log
+
 
     if (checked_deleat[0] == "deleat") {
         deleatFavori(ville)

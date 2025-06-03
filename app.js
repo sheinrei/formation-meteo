@@ -25,7 +25,8 @@ async function setDom(element) {
 
     create_html.innerHTML = `
        
-            <div id="name_city_${id}" class="name_city">${firstUppercase(element)}<br>
+            <div  class="name_city">
+            <p id="name_city_${id}">${firstUppercase(element)}</p>
             <p id="departement_city_${id}" class="departement_city">(${d.departement})</p>
             </div>
             
@@ -63,7 +64,6 @@ function deleatFavori(ville) {
 
     const new_local = JSON.parse(localStorage.getItem("city"));
     const index = new_local.indexOf(ville);
-
     new_local.splice(index, 1);
 
     localStorage.clear();

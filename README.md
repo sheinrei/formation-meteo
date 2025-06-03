@@ -9,6 +9,9 @@ pour ça il faut mettre image avec cet url=>  var iconurl = "http://openweatherm
 
 -L’accessibilité du web, fonte trop petite. font-size
 
+-!!! deleat ville suprime la derniere ville du localStorage porblème de l'index dans l'array
+
+{ passive: false });
 
 
 
