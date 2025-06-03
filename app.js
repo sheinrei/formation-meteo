@@ -25,9 +25,9 @@ async function setDom(element) {
 
     create_html.innerHTML = `
        
-            <div  class="name_city">
-            <p id="name_city_${id}">${firstUppercase(element)}</p>
-            <p id="departement_city_${id}" class="departement_city">(${d.departement})</p>
+            <div id="frame_ville_${id}" class="name_city">
+                 <p id="name_city_${id}">${firstUppercase(element)}</p>
+                  <p id="departement_city_${id}" class="departement_city">(${d.departement})</p>
             </div>
             
             <div class="meteo_city">

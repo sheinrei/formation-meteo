@@ -26,7 +26,8 @@ document.querySelector("#main_container").addEventListener("click", function (ev
     const target_id = event.target.id;
     const main_container = document.getElementById(target_id).closest(`#container_meteo_city_${splitId(target_id)[3]}`);
 
-    const ville = document.getElementById(`name_city_${splitId(target_id)[3]}`).textContent
+
+    const ville = document.getElementById(`name_city_${splitId(target_id)[splitId(target_id).length-1]}`).textContent
 
     let checked_deleat = splitId(target_id);
 

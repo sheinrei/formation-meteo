@@ -17,7 +17,7 @@ main_container.addEventListener("touchmove", function (event) {
 function slide(id, pos_x) {
     if (!last_x) { last_x = pos_x }
     let diff = pos_x - last_x;
-
+ 
     const e = document.getElementById(id)
     const width = e.clientWidth
 
@@ -37,14 +37,11 @@ main_container.addEventListener("touchend", function (e) {
     //let element = document.getElementById(`container_meteo_city_${id[id.length-1]}`);
 
     
-    
     // variable pour condition
     let width = main_container.clientWidth;
     const end_x = e.changedTouches[0].screenX;
     const diff = end_x - start_x[0]
-    let ville = main_container.childNodes[1].textContent;
-    
-
+    const ville = document.getElementById(`name_city_${id[id.length-1]}`).textContent
 
     diff > width * 0.33 || diff < -width*0.33 ? (deleatFavori(ville),main_container.remove()) : main_container.style.transform = `translateX(0)`
 
