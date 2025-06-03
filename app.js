@@ -26,7 +26,7 @@ async function setDom(element) {
     create_html.innerHTML = `
        
             <div id="name_city_${id}" class="name_city">${firstUppercase(element)}<br>
-            <p id="departement_city_${id}">(${d.departement})</p>
+            <p id="departement_city_${id}" class="departement_city">(${d.departement})</p>
             </div>
             
             <div class="meteo_city">
@@ -76,13 +76,12 @@ function deleatFavori(ville) {
 // return les coords d'une ville
 async function geocoding(city) {
 
-    const url = `https://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=${key}`
+    const url = `https://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=${key}`;
 
     try {
         const response = await fetch(url);
 
         data = await response.json();
-
         const departement = data[0].state;
         const lon = data[0].lon;
         const lat = data[0].lat;
@@ -107,8 +106,8 @@ async function meteoData(emplacement) {
 
     const response = await fetch(url);
     const data = await response.json();
-    const temp_min = convertCelsus(data.main.temp_min)
-    const temp_max = convertCelsus(data.main.temp_max)
+    const temp_min = convertCelsus(data.main.temp_min);
+    const temp_max = convertCelsus(data.main.temp_max);
     const humidity = data.main.humidity + "%";
     const weather = data.weather[0].description;
 
@@ -138,8 +137,8 @@ const local_storage = JSON.parse(localStorage.getItem("city"));
 async function init() {
 
     if (local_storage == null || local_storage.length == 0) {
-        localStorage.setItem("city", JSON.stringify(cities_array))
-        setDom("Paris");
+        localStorage.setItem("city", JSON.stringify(cities_array));
+        setDom("Paris")
     } else {
         for (let i = 0; i < local_storage.length; i++) {
             await setDom(local_storage[i])
