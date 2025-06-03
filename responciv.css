@@ -25,5 +25,9 @@
         display:none;
     }
 
+    .meteo_city{
+        font-size: 0.9rem;
+    }
+
 
 }
