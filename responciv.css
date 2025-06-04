@@ -27,10 +27,6 @@
         gap: 80px
     }
 
-    .deleat_favori {
-        display: none;
-    }
-
     .meteo_city {
         font-size: 1.05em;
         padding: 0px 10px;
