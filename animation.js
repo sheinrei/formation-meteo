@@ -1,13 +1,11 @@
-// annimer l'arrivé d'une nouvelle div mmeteo ville
-let translate_count = 200;
+let interval;
 
-function implementation(element) {
-    translate_count -= 10;
 
-    element.style.marginLeft = `${translate_count}px`;
-
-    if(translate_count == 0){
+function slideY(element) {
+    translate_count -= 2
+    element.style.transform = `translateY(${translate_count}px)`;
+    if (translate_count < 1) {
         clearInterval(interval)
     }
-
 }
+

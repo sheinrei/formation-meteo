@@ -3,7 +3,6 @@
 }
 
 
-
 body {
     display: flex;
     justify-content: center;
@@ -17,7 +16,6 @@ body {
     padding: 10px 20px;
     margin-bottom: 20px;
     max-width: 500px;
-    background-color: white;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -42,6 +40,11 @@ body {
 #consent_geoloc_true:hover,
 #consent_geoloc_false:hover {
     cursor: pointer;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
 }
 
 #main_container {
@@ -75,7 +78,7 @@ body {
 
 
 
-
+/* frame des villes */
 .container_meteo_city {
 
     width: 100%;
@@ -89,14 +92,24 @@ body {
 }
 
 /* Name city */
-.name_city {
-    font-size: 1.3rem;
+.name_city_content {
+    padding: 0 15px;
+    font-size: 1.5rem;
     font-weight: bolder;
     width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.name_city{
+    margin-bottom: 5px;
 }
 
 .departement_city {
     font-size: 0.85rem;
+    margin-top:5px
 }
 
 
@@ -104,20 +117,29 @@ body {
 
 .meteo_city {
     color: purple;
+    font-size: 1em;
+    display: flex;
+    flex-direction: column;
+    padding: 15px 0;
+    width: 350px;
+    gap:15px
 }
 
 .container_temperature {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     gap: 20px;
-
+    padding: 5px 0;
+    
 }
 
 .container_weather {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    gap: 20px
+    align-items: center;
+    gap: 20px;
 }
 
 .container_meteo {
@@ -126,14 +148,16 @@ body {
 
 .meteo_content {
     margin: 0;
-    padding: 15px 10px;
-
 }
 
-
+.icon_weather{
+    padding-left:15%
+}
 
 /* deleat */
 .container_deleat {
+    padding-right: 20px;
+    padding-left: 20px;
     display: flex;
     align-items: center;
     justify-content: center;

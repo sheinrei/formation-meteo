@@ -1,10 +1,11 @@
-@media (max-width:650px){
-    .container_meteo_city{
+@media (max-width:650px) {
+    .container_meteo_city {
         flex-direction: column;
     }
 
-    .name_city{
-        padding-top: 10px;
+    .name_city {
+        margin-top: 5px;
+
         width: 100%;
         display: flex;
         align-items: center;
@@ -12,22 +13,36 @@
         flex-direction: column;
     }
 
-    .departement_city{
+    .name_city_content {
+        padding-bottom: 10px;
+        width: auto;
+    }
+
+    .departement_city {
         margin-top: 0;
         margin-bottom: 0;
     }
 
-    .container_temperature{
-        gap:80px
+    .container_temperature {
+        gap: 80px
     }
 
-    .deleat_favori{
-        display:none;
+    .deleat_favori {
+        display: none;
     }
 
-    .meteo_city{
-        font-size: 0.9rem;
+    .meteo_city {
+        font-size: 1.05em;
+        padding: 0px 10px;
     }
 
+    .meteo_content {
+        display: flex;
+        text-align: center;
+    }
+
+    .icon_weather{
+        padding-left:10%
+    }
 
 }

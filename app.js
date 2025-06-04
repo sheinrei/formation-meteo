@@ -12,21 +12,18 @@ const splitId = (e) => e.split("_");
 
 async function setDom(element) {
     let id = Date.now();
-
-
     let d = await meteoData(element);
-
-
     const create_html = document.createElement("div");
-
     create_html.className = "container_meteo_city";
-
     create_html.id = `container_meteo_city_${id}`
+
+
+    const iconurl = "http://openweathermap.org/img/w/" + d.iconcode + ".png"
 
     create_html.innerHTML = `
        
-            <div id="frame_ville_${id}" class="name_city">
-                 <p id="name_city_${id}">${firstUppercase(element)}</p>
+            <div id="frame_ville_${id}" class="name_city_content">
+                 <p id="name_city_${id}" class="name_city">${firstUppercase(element)}</p>
                   <p id="departement_city_${id}" class="departement_city">(${d.departement})</p>
             </div>
             
@@ -37,7 +34,7 @@ async function setDom(element) {
                 </div>
 
                 <div class="container_weather" id="container_weather_${id}">
-                    <p id="weather_description_city_${id}" class="meteo_content">${firstUppercase(d.weather)}</p>
+                    <img class="icon_weather" id="icon_weather_${id}" src=${iconurl} />
                     <p id="humidity_city_${id}" class="meteo_content">Humidité : ${d.humidity}</p>
                 </div>
                 
@@ -52,31 +49,24 @@ async function setDom(element) {
                 
             </div>`
 
+    // Ajoute l'élément dans le html       
     const main_container = document.getElementById("main_container");
-
-
     main_container.prepend(create_html);
 
-    const interval = setInterval(implementation,10,create_html);
 
-    create_html.style.marginLeft = "200px"
+    // Animation de décalage
+    create_html.style.transform = "translateX(100px)"
+    let compteur = 100;
+    const handleur = setInterval(slideX, 10, create_html);
 
-    let translate_count = 200;
+    function slideX(element) {
+        compteur -= 2
+        element.style.transform = `translateX(${compteur}px)`;
 
-    function implementation(element) {
-        translate_count -= 1;
-
-        element.style.marginLeft = `${translate_count}px`;
-
-        if (translate_count == 0) {
-            console.log("end")
-            clearInterval(interval)
+        if (compteur == 0) {
+            clearInterval(handleur)
         }
-
     }
-
-
-
 }
 
 
@@ -132,10 +122,13 @@ async function meteoData(emplacement) {
 
     const response = await fetch(url);
     const data = await response.json();
+
+
+    const iconcode = data.weather[0].icon
     const temp_min = convertCelsus(data.main.temp_min);
     const temp_max = convertCelsus(data.main.temp_max);
     const humidity = data.main.humidity + "%";
-    const weather = data.weather[0].description;
+
 
 
 
@@ -143,8 +136,9 @@ async function meteoData(emplacement) {
         temp_min,
         temp_max,
         humidity,
-        weather,
-        departement
+        iconcode,
+        departement,
+
     }
     return cached_data
 }
