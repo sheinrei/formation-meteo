@@ -1,11 +1,22 @@
-function getLocation() {
+const consent_true = document.getElementById("consent_geoloc_true");
+const consent_false = document.getElementById("consent_geoloc_false");
+let frame_geoloc = document.getElementById("demande_geolocalisation");
+
+
+consent_true.addEventListener("click", function (){
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(setFirstDom);   
-
+        frame_geoloc.remove()
     } else {
         alert("Geolocation is not supported by this browser.");
     }
-}
+})
+
+consent_false.addEventListener("click", function (){
+    frame_geoloc.remove()
+})
+
+
 
 async function setFirstDom(position) {
 
@@ -23,5 +34,4 @@ async function setFirstDom(position) {
     setDom(city_geoloc);
 }
 
-getLocation();
 

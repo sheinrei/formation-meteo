@@ -1,6 +1,8 @@
-:root{
+:root {
     font-size: 1em;
 }
+
+
 
 body {
     display: flex;
@@ -11,15 +13,44 @@ body {
     font-family: "Jura", sans-serif;
 }
 
+.demande_geolocalisation {
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    max-width: 500px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 30px;
+    background-color: #f9d7fd;
+}
 
+.consent {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+#consent_geoloc_true,
+#consent_geoloc_false {
+    margin-top: 15px;
+    border: 1px solid black;
+    padding: 5px
+}
+
+#consent_geoloc_true:hover,
+#consent_geoloc_false:hover {
+    cursor: pointer;
+}
 
 #main_container {
-    background-color: rgb(113, 255, 111);
+    background-color: rgb(230, 96, 221);
     display: flex;
     flex-direction: column;
     align-items: center;
     border-bottom: none;
-    border:2px solid rgb(0, 0, 0);
+    border: 2px solid rgb(0, 0, 0);
 
 }
 
@@ -29,9 +60,9 @@ body {
     align-items: center;
     justify-content: center;
     padding: 20px 0;
-    background:radial-gradient(circle,#bd69c7 0%, rgb(95, 31, 92) 100% ) ;
+    background: radial-gradient(circle, #bd69c7 0%, rgb(95, 31, 92) 100%);
     border-radius: 16px 16px 0 0;
-    border:2px solid black;
+    border: 2px solid black;
     border-bottom: none;
 }
 
@@ -51,7 +82,7 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content:space-evenly;
+    justify-content: space-evenly;
     border-bottom: 1px solid black;
     background-color: rgb(250, 179, 248);
     font-size: 1.2em;
@@ -64,7 +95,7 @@ body {
     width: 25%;
 }
 
-.departement_city{
+.departement_city {
     font-size: 0.85rem;
 }
 
@@ -78,25 +109,25 @@ body {
 .container_temperature {
     display: flex;
     flex-direction: row;
-    gap:20px;
-    
+    gap: 20px;
+
 }
 
 .container_weather {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    gap:20px
+    gap: 20px
 }
 
 .container_meteo {
     width: 100%;
 }
 
-.meteo_content{
+.meteo_content {
     margin: 0;
     padding: 15px 10px;
-    
+
 }
 
 
@@ -106,9 +137,10 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-   
- 
+
+
 }
+
 .deleat_favori {
     width: 40px;
 

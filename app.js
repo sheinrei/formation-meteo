@@ -53,9 +53,35 @@ async function setDom(element) {
             </div>`
 
     const main_container = document.getElementById("main_container");
+
+
     main_container.prepend(create_html);
 
+    const interval = setInterval(implementation,10,create_html);
+
+    create_html.style.marginLeft = "200px"
+
+    let translate_count = 200;
+
+    function implementation(element) {
+        translate_count -= 1;
+
+        element.style.marginLeft = `${translate_count}px`;
+
+        if (translate_count == 0) {
+            console.log("end")
+            clearInterval(interval)
+        }
+
+    }
+
+
+
 }
+
+
+
+
 
 
 //function pour retirer une ville de localStorage
@@ -87,7 +113,7 @@ async function geocoding(city) {
         const lat = data[0].lat;
         return { lon, lat, departement }
 
-    } catch{
+    } catch {
         deleatFavori(city)
         alert("Ville inexistante");
     }

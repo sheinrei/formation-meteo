@@ -18,6 +18,20 @@
 </head>
 
 <body>
+
+    <div class="demande_geolocalisation" id="demande_geolocalisation">
+        <div class="frame_consent">
+            Cette application vous permet d'afficher la meteo selon votre localisation actuelle
+            pour l'afficher veuille accepter l'autorisation de geolocalisation.
+        </div>
+
+        <div class="consent">
+            <div id="consent_geoloc_true">Accepter</div>
+            <div id="consent_geoloc_false">Refuser</div>    
+        </div>
+    </div>
+
+
     <div class="content">
         <div class="container_input_city">
             <input class="input_city" id="input_city" type="text" placeholder="Entrez une ville" value="">
@@ -27,16 +41,17 @@
         </div>
 
         <div id="main_container">
-            
+
         </div>
     </div>
 </body>
 
-
+<script src="animation.js"></script>
 <script src="slidetodeleat.js"></script>
+<script src="eventListener.js"></script>
+
 <script src="city_utilisateur.js"></script> <!-- premiere ville geoloc utilisateur -->
 <script src="app.js"></script>
 
-<script src="eventListener.js"></script>
 
 </html>

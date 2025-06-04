@@ -11,7 +11,8 @@ main_container.addEventListener("touchmove", function (event) {
 
     let pos_x = event.touches[0].clientX;
     slide(id, pos_x);
-})
+    event.preventDefault()
+}, {passive:false})
 
 
 function slide(id, pos_x) {
@@ -52,7 +53,10 @@ main_container.addEventListener("touchend", function (e) {
 
 
 //event pour retenir la premiere pos de x enregistré dans un tableau pour retenir first = [0]
-main_container.addEventListener("touchstart", function (e) {start_x.push(e.touches[0].screenX)})
+main_container.addEventListener("touchstart", function (e) {
+    start_x.push(e.touches[0].screenX)
+    e.preventDefault()
+},{passive:false})
 
 
 //racourcie touche enter pour valider l'input d'une nouvelle ville
