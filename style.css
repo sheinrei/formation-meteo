@@ -101,6 +101,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    text-align: center;
 }
 
 .name_city{
