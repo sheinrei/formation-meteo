@@ -9,3 +9,16 @@ function slideY(element) {
     }
 }
 
+function slideDeleat(element){
+    $(element).css("position","relative").animate({
+        right: "150px",
+        opacity: 0,
+        height : '0px'
+    },2000, function(){
+        $(this).remove()
+    })
+
+    
+
+
+}

@@ -44,7 +44,7 @@ main_container.addEventListener("touchend", function (e) {
     const diff = end_x - start_x[0]
     const ville = document.getElementById(`name_city_${id[id.length-1]}`).textContent
 
-    diff > width * 0.33 || diff < -width*0.33 ? (deleatFavori(ville),main_container.remove()) : main_container.style.transform = `translateX(0)`
+    diff > width * 0.33 || diff < -width*0.33 ? (deleatFavori(ville),slideDeleat(main_container)) : main_container.style.transform = `translateX(0)`
 
     // remise à 0 des positions
     last_x = 0;

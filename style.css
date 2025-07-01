@@ -168,5 +168,5 @@ body {
 
 .deleat_favori {
     width: 40px;
-
+    cursor: pointer;
 }

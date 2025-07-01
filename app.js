@@ -58,17 +58,17 @@ async function setDom(element) {
     create_html.style.transform = "translateX(100px)"
     let compteur = 100;
     const handleur = setInterval(slideX, 10, create_html);
-
+    
     function slideX(element) {
         compteur -= 2
         element.style.transform = `translateX(${compteur}px)`;
-
+    
         if (compteur == 0) {
             clearInterval(handleur)
         }
     }
-}
 
+}
 
 
 

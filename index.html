@@ -15,6 +15,9 @@
         href="https://fonts.googleapis.com/css2?family=Ancizar+Serif:ital,wght@0,300..900;1,300..900&family=Jura:wght@300..700&family=Lisu+Bosa:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
 
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+
 </head>
 
 <body>
@@ -26,7 +29,7 @@
 
         <div class="consent">
             <div id="consent_geoloc_true">Accepter</div>
-            <div id="consent_geoloc_false">Refuser</div>    
+            <div id="consent_geoloc_false">Refuser</div>
         </div>
     </div>
 
@@ -36,7 +39,10 @@
             <input class="input_city" id="input_city" type="text" placeholder="Entrez une ville" value="">
             <!-- <input class="submit" type="submit" id="submit"> -->
             <i id="submit" class=" fa fa-regular fa-search"
-                style="color:black; font-size: 1.8em;padding:10px 10px;"></i>
+                style="color:black;
+                 font-size: 1.8em;
+                 padding:10px 10px;
+                 cursor:pointer"></i>
         </div>
 
         <div id="main_container">

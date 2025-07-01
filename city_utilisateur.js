@@ -7,7 +7,7 @@ let translate_count = frame_geoloc.clientHeight;
 
 
 
-
+//dialogue pour demande geoloc
 consent_true.addEventListener("click", function () {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(setFirstDom);

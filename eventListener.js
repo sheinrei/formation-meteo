@@ -22,7 +22,7 @@ submit.addEventListener("click", addCity);
 
 
 // event pour chercher si quand on clic on selectionne bien l'element pour deleat
-document.querySelector("#main_container").addEventListener("click", function (event) {
+$("#main_container").on("click", function (event) {
     const target_id = event.target.id;
     const main_container = document.getElementById(target_id).closest(`#container_meteo_city_${splitId(target_id)[3]}`);
 
@@ -34,7 +34,10 @@ document.querySelector("#main_container").addEventListener("click", function (ev
 
     if (checked_deleat[0] == "deleat") {
         deleatFavori(ville)
-        main_container.remove();
+        //annimation slide puis deleat
+        slideDeleat(main_container);
+
+        
     }  
 })
 
